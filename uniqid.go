@@ -10,7 +10,7 @@ import (
 var counter atomic.Int64
 
 func init() {
-	counter.Store(rand.Int64N(0x75bcd15))
+	counter.Store(rand.Int64N(0xfffff))
 }
 
 // New returns a 13-character unique ID based on the current timestamp and an atomic counter.
