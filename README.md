@@ -1,27 +1,47 @@
-# go-uniqid &nbsp; [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Simple%20PHP%20uniqid%28%29%20implementation%20in%20Golang.%20&amp;url=https://github.com/mintance/go-uniqid&amp;hashtags=go,php)
+# go-uniqid
 
-[![License: Apache 2](https://img.shields.io/hexpm/l/plug.svg)](https://github.com/mintance/go-uniqid/blob/master/LICENSE)
-![Golang Version](https://img.shields.io/badge/golang-1.5%2B-blue.svg)
-[![GitHub issues](https://img.shields.io/github/issues/mintance/go-uniqid.svg)](https://github.com/mintance/go-uniqid/issues)
-[![Travis CI](https://img.shields.io/travis/mintance/go-uniqid.svg)](https://travis-ci.org/mintance/go-uniqid)
+[![CI](https://github.com/mintance/go-uniqid/actions/workflows/ci.yml/badge.svg)](https://github.com/mintance/go-uniqid/actions/workflows/ci.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/mintance/go-uniqid.svg)](https://pkg.go.dev/github.com/mintance/go-uniqid)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-Simple PHP uniqid() implementation in Golang
+Unique ID generator for Go, inspired by PHP's `uniqid()`. Goroutine-safe.
 
-### How to use
+## Install
 
-##### Just include our package
-
-```go get github.com/mintance/go-uniqid```
-
-##### See samples
-
-In PHP was:
-```php
-$id = uniqid("test", true);
+```
+go get github.com/mintance/go-uniqid
 ```
 
-In Go type:
+## Usage
+
 ```go
-id := uniqid.New(uniqid.Params{"test", true})
+package main
+
+import (
+    "fmt"
+    "github.com/mintance/go-uniqid"
+)
+
+func main() {
+    fmt.Println(uniqid.New())                              // "6601a3d800001"
+    fmt.Println(uniqid.NewWithPrefix("usr_"))               // "usr_6601a3d800002"
+    fmt.Println(uniqid.NewWithEntropy())                    // "6601a3d8000035.82749103"
+    fmt.Println(uniqid.NewWithPrefixAndEntropy("sess_"))    // "sess_6601a3d8000042.19384756"
+}
 ```
+
+## API
+
+| Function | Description |
+|---|---|
+| `New()` | 13-char hex ID (timestamp + counter) |
+| `NewWithPrefix(prefix)` | Prefixed hex ID |
+| `NewWithEntropy()` | 23-char ID with random decimal suffix |
+| `NewWithPrefixAndEntropy(prefix)` | Prefixed ID with entropy |
+
+All functions are safe for concurrent use.
+
+## License
+
+[Apache 2.0](LICENSE)
 
