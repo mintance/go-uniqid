@@ -1,4 +1,6 @@
-# go-uniqid &nbsp; [![Share on X](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Unique%20ID%20generator%20for%20Go%2C%20inspired%20by%20PHP%27s%20uniqid%28%29.%20Goroutine-safe.&url=https://github.com/mintance/go-uniqid&hashtags=go,golang) &nbsp; [![Share on Reddit](https://img.shields.io/badge/share-reddit-orange?logo=reddit&logoColor=white)](https://www.reddit.com/submit?url=https://github.com/mintance/go-uniqid&title=go-uniqid%20-%20Unique%20ID%20generator%20for%20Go)
+# go-uniqid
+
+[![Share on X](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Unique%20ID%20generator%20for%20Go%2C%20inspired%20by%20PHP%27s%20uniqid%28%29.%20Goroutine-safe.&url=https://github.com/mintance/go-uniqid&hashtags=go,golang) [![Share on Reddit](https://img.shields.io/badge/share-reddit-orange?logo=reddit&logoColor=white)](https://www.reddit.com/submit?url=https://github.com/mintance/go-uniqid&title=go-uniqid%20-%20Unique%20ID%20generator%20for%20Go)
 
 [![CI](https://github.com/mintance/go-uniqid/actions/workflows/ci.yml/badge.svg)](https://github.com/mintance/go-uniqid/actions/workflows/ci.yml)
 [![Tests](https://img.shields.io/badge/tests-9%20passed-brightgreen)](https://github.com/mintance/go-uniqid/actions/workflows/ci.yml)
